@@ -44,8 +44,9 @@ python validador-senha.py
 
 ## Tecnologias utilizadas
 
-- **Python 3**
-- Módulo `string` (nativo)
+- `Python 3`
+- Módulo `string` para verificar a existência de caracteres especiais na senha.
+- Módulo `rich` para otimizar a estética do programa no terminal.
 
 ---
 

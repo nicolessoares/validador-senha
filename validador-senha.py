@@ -1,14 +1,17 @@
 import string
+from rich import print
+from rich.panel import Panel
+from rich import box
 
-print("""========== CADASTRO DE SENHA ==========
-\033[1;37mSua senha deve ter:\033[m
+print(Panel.fit((""":locked: [white]CADASTRO DE SENHA
+                 
+Sua senha deve ter:[/]
   >> Entre 8 e 30 caracteres
   >> Pelo menos 1 letra maíuscula
   >> Pelo menos 1 número
   >> Pelo menos 1 caractere especial (Ex. @!,#)
-\033[1;37mSua senha não pode ter:\033[m
-  >> Espaços em branco
-=======================================""")
+[white]Sua senha não pode ter:[/]
+  >> Espaços em branco"""), box=box.DOUBLE))
 
 def validar_senha(senha):
   erros = []
@@ -33,13 +36,13 @@ while True:
     if not erros:
         break
     for e in erros:
-        print(f'\033[31m>> {e}\033[m')
+        print(f'[red]:heavy_exclamation_mark: {e}[/]')
 
 confirma_senha = str(input('Confirme a senha: '))
 while confirma_senha != senha:
-  print('\033[31mAs senhas precisam ser iguais. Tente novamente.\033[m')
+  print('[red]:cross_mark: As senhas precisam ser iguais. Tente novamente.[/]')
   confirma_senha = str(input('Confirme a senha: '))
-print('\033[32mSenha registrada com sucesso!\033[m')
+print(':white_check_mark: [green]Senha registrada com sucesso![/]')
 
 
 

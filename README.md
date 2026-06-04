@@ -42,7 +42,7 @@ python validador-senha.py
 
 ---
 
-## Tecnologias utilizadas
+## O que foi utilizado
 
 - `Python 3`
 - Módulo `string` para verificar a existência de caracteres especiais na senha.

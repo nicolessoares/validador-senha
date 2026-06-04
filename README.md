@@ -37,7 +37,7 @@ git clone https://github.com/nicolessoares/validador-senha.git
 cd validador-senha
 
 # Executando o projeto
-python validador-senha.py
+python main.py
 ```
 
 ---
